@@ -10,7 +10,8 @@
         base64 : string,
         code : string
     }>);
-    const load = () => {
+    const load = async () => {
+            pics.push({base64 : '占位', code : '占位'})
             fetch('../static/cards.cdb')
             .then((response) => response.blob())
             .then(async (b) => {
@@ -24,7 +25,7 @@
     onBeforeMount(load);
 
     function getBase64(obj) {
-        return new Promise(function (resolve, reject) {
+        return new Promise(function () {
             let reader = new FileReader();
             reader.readAsDataURL(obj.blob);
             reader.onload = function () {
