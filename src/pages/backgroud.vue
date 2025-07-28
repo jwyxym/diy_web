@@ -11,7 +11,7 @@
         code : string
     }>);
     const load = async () => {
-            pics.push({base64 : '占位', code : '占位'})
+            getBase64(await exportImage(new Card(Array(30).fill(''))));
             fetch('../static/cards.cdb')
             .then((response) => response.blob())
             .then(async (b) => {
