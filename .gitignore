@@ -20,5 +20,5 @@ dist
 *.sln
 *.sw?
 
-src/static/*.card
-src/static/card/
+src/static/*.cdb
+src/static/pics/

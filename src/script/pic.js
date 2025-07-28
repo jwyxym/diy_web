@@ -137,7 +137,7 @@ let list = {
 };
 
 function to_data (card) {
-    let center_pic = `../static/card/${card.id}.jpg`
+    let center_pic = `../static/pics/${card.id}.jpg`
     let data = {
         language: 'sc',
         font: 'custom2',
